@@ -18,10 +18,32 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // 不可变数组
+    NSArray *array1 = [NSArray new];
+    array1[0];
+    array1[10];
+    
+    // 可变数组
     NSMutableArray *array = [NSMutableArray array];
     [array insertObject:@"ddd" atIndex:1];
-    
     [array replaceObjectAtIndex:1 withObject:@""];
+    array[0];
+    array[10];
+    
+    // 可变字典
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:
+             nil forKey:@""];
+    id obj = [dict objectForKey:@""];
+    
+    NSString *strdict = nil;
+//    NSDictionary *dict1 = [[NSDictionary alloc] initWithObjectsAndKeys:@"",nil,@"",@"", nil];
+    
+    NSDictionary *dict3 = [[NSDictionary alloc] initWithObjectsAndKeys:nil,@"",@"",@"sds", nil];
+    
+    // 字符串
+    NSString *str = [@"" stringByAppendingString:nil];
 }
 
 - (void)didReceiveMemoryWarning
